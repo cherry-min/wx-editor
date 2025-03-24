@@ -217,7 +217,7 @@ function initEditor() {
     },
   })
 
-  editor.value.on(`change`, (e) => {
+  editor.value.on(`change`, (e: any) => {
     clearTimeout(changeTimer.value)
     changeTimer.value = setTimeout(() => {
       onEditorRefresh()
@@ -226,7 +226,7 @@ function initEditor() {
   })
 
   // 粘贴上传图片并插入
-  editor.value.on(`paste`, (_cm, e) => {
+  editor.value.on(`paste`, (_cm: any, e: any) => {
     if (!(e.clipboardData && e.clipboardData.items) || isImgLoading.value) {
       return
     }

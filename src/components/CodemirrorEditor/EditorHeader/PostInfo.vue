@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { Post, PostAccount } from '@/types'
-import { useStore } from '@/stores'
+// import { useStore } from '@/stores'
 import { Check, Info } from 'lucide-vue-next'
 import { CheckboxIndicator, CheckboxRoot, Primitive } from 'radix-vue'
 
-const store = useStore()
-const { output, editor } = storeToRefs(store)
+// const store = useStore()
+// const { output, editor } = storeToRefs(store)
 
 const dialogVisible = ref(false)
 const extensionInstalled = ref(false)
@@ -23,42 +23,42 @@ const form = ref<Post>({
 
 const allowPost = computed(() => extensionInstalled.value && form.value.accounts.some(a => a.checked))
 
-async function prePost() {
-  if (extensionInstalled.value && allAccounts.value.length === 0) {
-    await getAccounts()
-  }
+// async function prePost() {
+//   if (extensionInstalled.value && allAccounts.value.length === 0) {
+//     await getAccounts()
+//   }
 
-  let auto: Post = {
-    thumb: ``,
-    title: ``,
-    desc: ``,
-    content: ``,
-    markdown: ``,
-    accounts: [],
-  }
-  const accounts = allAccounts.value.filter(a => ![`weixin`, `ipfs`].includes(a.type))
-  try {
-    auto = {
-      thumb: document.querySelector<HTMLImageElement>(`#output img`)?.src ?? ``,
-      title: [1, 2, 3, 4, 5, 6]
-        .map(h => document.querySelector(`#output h${h}`)!)
-        .filter(h => h)[0]
-        .textContent ?? ``,
-      desc: document.querySelector(`#output p`)!.textContent ?? ``,
-      content: output.value,
-      markdown: editor.value?.getValue() ?? ``,
-      accounts,
-    }
-  }
-  catch (error) {
-    console.log(`error`, error)
-  }
-  finally {
-    form.value = {
-      ...auto,
-    }
-  }
-}
+//   let auto: Post = {
+//     thumb: ``,
+//     title: ``,
+//     desc: ``,
+//     content: ``,
+//     markdown: ``,
+//     accounts: [],
+//   }
+//   const accounts = allAccounts.value.filter(a => ![`weixin`, `ipfs`].includes(a.type))
+//   try {
+//     auto = {
+//       thumb: document.querySelector<HTMLImageElement>(`#output img`)?.src ?? ``,
+//       title: [1, 2, 3, 4, 5, 6]
+//         .map(h => document.querySelector(`#output h${h}`)!)
+//         .filter(h => h)[0]
+//         .textContent ?? ``,
+//       desc: document.querySelector(`#output p`)!.textContent ?? ``,
+//       content: output.value,
+//       markdown: editor.value?.getValue() ?? ``,
+//       accounts,
+//     }
+//   }
+//   catch (error) {
+//     console.log(`error`, error)
+//   }
+//   finally {
+//     form.value = {
+//       ...auto,
+//     }
+//   }
+// }
 
 declare global {
   interface Window {
@@ -119,9 +119,9 @@ onBeforeMount(() => {
 <template>
   <Dialog v-model:open="dialogVisible" @update:open="onUpdate">
     <DialogTrigger>
-      <Button variant="outline" @click="prePost">
+      <!-- <Button variant="outline" @click="prePost">
         发布
-      </Button>
+      </Button> -->
     </DialogTrigger>
     <DialogContent>
       <DialogHeader>

@@ -97,11 +97,10 @@ console.log("Hello, Doocs!");
 
 Markdown 支持简单的表格，用 `|` 和 `-` 分隔单元格和表头。
 
-| 项目人员                                    | 邮箱                   | 微信号       |
+|xxx                               | xxx                | xxx     |
 | ------------------------------------------- | ---------------------- | ------------ |
-| [yanglbme](https://github.com/yanglbme)     | contact@yanglibin.info | YLB0109      |
-| [YangFong](https://github.com/YangFong)     | yangfong2022@gmail.com | yq2419731931 |
-| [thinkasany](https://github.com/thinkasany) | thinkasany@gmail.com   | thinkasany   |
+| xxx     | xxx| xxx     |
+| xxx| xxx | xxx  |
 
 这样的表格让数据展示更为清爽！
 
@@ -178,15 +177,5 @@ Markdown 是一种简单、强大且易于掌握的标记语言，通过学习�
 
 现在，拿起 Markdown 编辑器，开始创作吧！探索 Markdown 的世界，你会发现它远比想象中更精彩！
 
-#### 推荐阅读
 
-- [阿里又一个 20k+ stars 开源项目诞生，恭喜 fastjson！](https://mp.weixin.qq.com/s/RNKDCK2KoyeuMeEs6GUrow)
-- [刷掉 90% 候选人的互联网大厂海量数据面试题（附题解 + 方法总结）](https://mp.weixin.qq.com/s/rjGqxUvrEqJNlo09GrT1Dw)
-- [好用！期待已久的文本块功能究竟如何在 Java 13 中发挥作用？](https://mp.weixin.qq.com/s/kalGv5T8AZGxTnLHr2wDsA)
-- [2019 GitHub 开源贡献排行榜新鲜出炉！微软谷歌领头，阿里跻身前 12！](https://mp.weixin.qq.com/s/_q812aGD1b9QvZ2WFI0Qgw)
-
----
-
-<center>
-    <img src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/1648303220922-7e14aefa-816e-44c1-8604-ade709ca1c69.png" style="width: 100px;">
-</center>
+[doc](https://github.com/doocs/md) 
